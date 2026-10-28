@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176b45">
+  <meta name="description" content="Learn to recognize scams, protect your information, and understand real-world scam experiences.">
+  <title>ClearShield — Spot the scam. Protect your future.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=5">
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/app.js?v=5"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="ClearShield home">
+        <span class="brand-mark" aria-hidden="true">✓</span>
+        <span>clear<span class="brand-green">shield</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#learn">Learn</a>
+        <a href="/scam-techniques">Scam techniques</a>
+        <a href="#stories">Community stories</a>
+        <a href="#live-discussion">Live discussion</a>
+        <a href="#questionnaire">Share experience</a>
+        <a href="#ai-guide">AI guidance</a>
+        <a href="#faqs">FAQs</a>
+        <a class="button button-small button-green" href="#learn">Explore safety guides</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Awareness is your first line of defence</p>
+          <h1>Spot the scam.<br><span class="text-green">Protect your future.</span></h1>
+          <p class="hero-lede">Learn how scams work, recognize the warning signs, and make safer decisions online. Real awareness. Practical guidance. No shame.</p>
+          <div class="hero-actions">
+            <a class="button button-green" href="#learn">Explore scam guides <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="#questionnaire">Share your experience</a>
+          </div>
+          <div class="hero-trust"><span class="trust-icon">✓</span> Educational resources · Privacy-first principles · Human-reviewed stories</div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a protected phone and scam warning">
+          <div class="art-glow"></div>
+          <div class="art-card art-card-top"><span class="mini-icon orange">!</span><span><b>Suspicious message</b><small>Unexpected reward · Urgent action</small></span><span class="art-x">×</span></div>
+          <div class="shield-illustration"><div class="shield-inner"><span>✓</span></div></div>
+          <div class="art-card art-card-bottom"><span class="mini-icon green">✓</span><span><b>Pause. Check. Protect.</b><small>Think before you click</small></span></div>
+          <span class="floating-dot dot-one"></span><span class="floating-dot dot-two"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip">
+      <div class="container proof-grid">
+        <div><span class="proof-icon">⌕</span><span><b>Recognize the signs</b><small>Learn common red flags</small></span></div>
+        <div><span class="proof-icon">◉</span><span><b>Learn from experience</b><small>Understand real-world patterns</small></span></div>
+        <div><span class="proof-icon">♧</span><span><b>Choose a safer next step</b><small>Practical, non-judgmental guidance</small></span></div>
+      </div>
+    </section>
+
+    <section class="section" id="learn">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Know what to look for</p>
+          <h2>Understand the tricks.<br><span class="text-green">Stay one step ahead.</span></h2>
+          <p>Scams often rely on urgency, trust, fear, or the promise of easy money. Learn the warning signs before you act.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><div class="feature-icon mint">↗</div><h3>Fake jobs & recruitment</h3><p>Spot suspicious offers, upfront fee requests, fake recruiters, and pressure to share sensitive documents.</p><a href="#faqs">Learn the red flags <span>→</span></a></article>
+          <article class="feature-card"><div class="feature-icon pale-orange">₦</div><h3>Investment scams</h3><p>Understand unrealistic returns, Ponzi schemes, fake trading platforms, and false guarantees.</p><a href="#faqs">Learn the red flags <span>→</span></a></article>
+          <article class="feature-card"><div class="feature-icon pale-blue">⌁</div><h3>Phishing & impersonation</h3><p>Check suspicious links, fake login pages, urgent account alerts, and messages impersonating trusted brands.</p><a href="#faqs">Learn the red flags <span>→</span></a></article>
+        </div>
+        <div class="learn-banner">
+          <div><p class="eyebrow">A safer way forward</p><h3>Honest work builds a future<br>you don't have to hide.</h3><p>Explore practical routes into digital skills, freelancing, training, and legitimate work.</p></div>
+          <a class="button button-white" href="#opportunities">Explore honest opportunities <span>→</span></a>
+          <div class="banner-orb" aria-hidden="true">↗</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="stories">
+      <div class="container">
+        <div class="section-heading heading-row">
+          <div><p class="eyebrow">Community experiences</p><h2>Learn from what<br><span class="text-green">others have seen.</span></h2></div>
+          <p>Anonymous, moderated experiences help people recognize patterns. Only reviewed stories are published here; clearly labelled examples appear only when the community feed is empty.</p>
+        </div>
+        <div class="privacy-alert" role="note">
+          <span class="alert-icon">!</span>
+          <div><strong>Protect your privacy before posting</strong><p>Never share names, usernames, phone numbers, email addresses, passwords, bank details, account numbers, exact locations, private screenshots, or information that identifies you or someone else. Stories are reviewed before publication, but please remove private details before submitting.</p></div>
+        </div>
+        <div class="story-grid" id="storyGrid">
+          <article class="story-card story-empty"><h3>Loading community stories…</h3><p>Approved stories from the database will appear here.</p></article>
+        </div>
+        <p class="feed-note" id="feedNote">Loading approved community stories…</p>
+        <div class="center-action"><a class="button button-outline" href="#questionnaire">Share an anonymous experience <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section" id="live-discussion">
+      <div class="container discussion-layout">
+        <div class="discussion-intro">
+          <p class="eyebrow">Community conversation</p>
+          <h2>Talk it through.<br><span class="text-green">Learn together.</span></h2>
+          <p>Join the live ClearShield discussion without creating an account. A temporary guest name is assigned automatically.</p>
+          <div class="privacy-card"><span class="privacy-card-icon">♧</span><div><strong>Keep the room safe</strong><p>Do not post names, phone numbers, email addresses, passwords, verification codes, bank details, private screenshots, threats, or identifying accusations. Messages are visible to everyone and saved to the site database.</p></div></div>
+          <p class="fine-print">This is a public community room, not a private counselling service. Messages may be removed for safety or moderation reasons.</p>
+        </div>
+        <div class="discussion-card">
+          <div class="discussion-header"><div><strong>ClearShield Live Discussion</strong><span id="discussionStatus" role="status">Connecting to the room…</span></div><span class="live-pill"><i></i> LIVE</span></div>
+          <div class="discussion-identity">You are joining as <strong id="guestLabel">Guest…</strong> <span>· No sign-up required</span></div>
+          <div class="discussion-messages" id="discussionMessages" aria-live="polite" aria-label="Live discussion messages"><p class="discussion-placeholder">Loading recent messages…</p></div>
+          <form class="discussion-form" id="discussionForm">
+            <label class="sr-only" for="discussionInput">Message the community</label>
+            <textarea id="discussionInput" rows="2" maxlength="600" placeholder="Share a general question or safety tip…" required></textarea>
+            <button class="button button-green" id="discussionSend" type="submit">Send</button>
+          </form>
+          <p class="discussion-feedback" id="discussionFeedback" role="status" aria-live="polite">Please keep messages respectful and avoid personal information.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="questionnaire">
+      <div class="container form-layout">
+        <div class="form-intro">
+          <p class="eyebrow">Your experience can help</p>
+          <h2>Share a lesson.<br><span class="text-green">Help someone stay safe.</span></h2>
+          <p>Tell us what happened without revealing who you are. Submissions stay private until a moderator reviews them. Only approved, sanitized stories may be published.</p>
+          <ul class="check-list"><li>✓ No account required</li><li>✓ No name or email field</li><li>✓ Publication is reviewed first</li></ul>
+          <div class="privacy-card"><span class="privacy-card-icon">♧</span><div><strong>Keep it anonymous</strong><p>Do not include identifying details in written answers. We cannot guarantee that a story is anonymous if you include details that identify you.</p></div></div>
+        </div>
+        <form class="questionnaire form-card" id="questionnaireForm">
+          <div class="form-card-heading"><span class="step-label">ANONYMOUS QUESTIONNAIRE</span><h3>What did you experience?</h3><p>Required fields are marked with an asterisk.</p></div>
+          <label>1. What best describes your experience? <span>*</span>
+            <select name="experience" required>
+              <option value="">Choose an answer</option>
+              <option value="targeted">I was targeted but recognized the scam</option>
+              <option value="victim">I fell victim to a scam</option>
+              <option value="prevented">I stopped before losing money or information</option>
+              <option value="other">I witnessed or learned about a scam affecting someone else</option>
+            </select>
+          </label>
+          <label>2. What type of scam was involved? <span>*</span>
+            <select name="category" required>
+              <option value="">Choose a category</option>
+              <option value="job">Fake job or recruitment offer</option>
+              <option value="investment">Investment or Ponzi scheme</option>
+              <option value="romance">Romance or relationship scam</option>
+              <option value="phishing">Phishing or account theft</option>
+              <option value="impersonation">Impersonation scam</option>
+              <option value="marketplace">Online shopping or marketplace scam</option>
+              <option value="sextortion">Sextortion or blackmail</option>
+              <option value="other">Other / not sure</option>
+            </select>
+          </label>
+          <label>3. Where did the first contact happen? <span>*</span>
+            <select name="channel" required>
+              <option value="">Choose a channel</option>
+              <option value="social">Social media</option>
+              <option value="messaging">Messaging app</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone call or SMS</option>
+              <option value="website">Website or online marketplace</option>
+              <option value="in-person">In person</option>
+              <option value="other">Other / not sure</option>
+            </select>
+          </label>
+          <fieldset><legend>4. What made it seem convincing? <span>*</span></legend>
+            <div class="checkbox-grid">
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="easy-money"> Easy money / guaranteed returns</label>
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="urgency"> Pressure to act quickly</label>
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="trust"> Trust or relationship</label>
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="authority"> Trusted organization impersonation</label>
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="fear"> Fear or intimidation</label>
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="opportunity"> Job, prize, or special opportunity</label>
+              <label class="check-option"><input type="checkbox" name="persuasionFactors" value="other"> Other / not sure</label>
+            </div>
+          </fieldset>
+          <label>5. What was the outcome? <span>*</span>
+            <select name="outcome" required>
+              <option value="">Choose an outcome</option>
+              <option value="recognized">I recognized it before taking action</option>
+              <option value="money">I lost money</option>
+              <option value="information">I shared personal information or account access</option>
+              <option value="both">I lost money and shared information</option>
+              <option value="other">Another outcome / prefer not to say</option>
+            </select>
+          </label>
+          <label>6. What do you wish you had known earlier?
+            <textarea name="lesson" maxlength="1000" rows="3" placeholder="Share a lesson others could learn from..."></textarea>
+          </label>
+          <label>7. Describe what happened (optional)
+            <textarea name="description" maxlength="3000" rows="4" placeholder="Describe the warning signs. Do not include private or identifying details."></textarea>
+          </label>
+          <div class="inline-warning"><strong>Before you submit:</strong> Do not include personal information, account details, private conversations, or identifiable allegations. We may reject or edit content to protect privacy and safety.</div>
+          <label class="consent-option"><input type="checkbox" name="publicationConsent" required><span>I consent to my response being reviewed and, if approved, published anonymously for educational purposes. <b>*</b></span></label>
+          <button class="button button-green button-full" type="submit" id="submitQuestionnaire">Submit for review <span aria-hidden="true">→</span></button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+          <p class="fine-print">Submissions are not published automatically. Avoid including details that could identify you even after editing.</p>
+        </form>
+        <section class="submission-success form-card" id="submissionSuccess" hidden tabindex="-1" aria-labelledby="submissionSuccessTitle" role="status" aria-live="polite">
+          <div class="success-check" aria-hidden="true">✓</div>
+          <p class="step-label">SUBMISSION RECEIVED</p>
+          <h3 id="submissionSuccessTitle">Thank you for sharing your experience.</h3>
+          <p>Your request has been received and is being processed. A moderator will review it before anything is published. Your experience will not appear publicly unless it is approved.</p>
+          <button class="button button-green button-full" type="button" id="submitAnotherExperience">Submit another experience</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ai-guide">
+      <div class="container ai-layout">
+        <div class="ai-copy">
+          <p class="eyebrow">ClearShield AI guidance</p>
+          <h2>Unsure what to do?<br><span class="text-green">Talk it through.</span></h2>
+          <p>Ask for general guidance about suspicious messages, online offers, or safer next steps. The assistant is designed to support awareness, not to make definitive claims about whether something is safe.</p>
+          <div class="ai-notice"><span class="notice-symbol">!</span><p><strong>Keep private information out of chat.</strong><br>Never share passwords, verification codes, bank details, private phone numbers, full names, addresses, or sensitive screenshots. AI responses can be wrong; verify important advice independently.</p></div>
+          <div class="ai-prompts"><span>Try asking:</span><button type="button" class="prompt-chip" data-prompt="What are common warning signs of a fake job offer?">Warning signs of a fake job</button><button type="button" class="prompt-chip" data-prompt="Someone is pressuring me to pay urgently. What safe steps should I take?">Pressure to pay urgently</button><button type="button" class="prompt-chip" data-prompt="I clicked a suspicious link. What should I do next?">I clicked a suspicious link</button></div>
+        </div>
+        <div class="chat-card">
+          <div class="chat-header"><div class="ai-avatar">✦</div><div><strong>ClearShield Guide</strong><span><i></i> Educational assistant</span></div><button id="clearChat" class="icon-button" type="button" aria-label="Clear chat" title="Clear chat">↺</button></div>
+          <div class="chat-notice">Privacy reminder: do not enter personal or financial information. This chat is not an emergency service.</div>
+          <div class="chat-messages" id="chatMessages" aria-live="polite">
+            <div class="chat-message assistant-message"><span class="message-avatar">✦</span><div><p>Hi! I can help you think through scam warning signs and general safety steps. What would you like to understand?</p><small>ClearShield Guide</small></div></div>
+          </div>
+          <form class="chat-form" id="chatForm">
+            <label class="sr-only" for="chatInput">Your question</label>
+            <textarea id="chatInput" maxlength="1500" rows="2" placeholder="Ask a general question — no private details..." required></textarea>
+            <button class="send-button" type="submit" id="sendChat" aria-label="Send message">↑</button>
+          </form>
+          <p class="chat-disclaimer">AI can make mistakes. For immediate financial loss or account compromise, contact your bank or platform through its official channel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="opportunities">
+      <div class="container opportunities-layout">
+        <div><p class="eyebrow">Build a better path</p><h2>Choose honest work.<br><span class="text-green">Build lasting value.</span></h2><p>Financial pressure is real, but fraud harms people and can carry serious consequences. There are legitimate ways to learn, work, and build income over time.</p></div>
+        <div class="opportunity-list">
+          <article><span class="opportunity-icon">⌘</span><div><h3>Learn digital skills</h3><p>Explore web development, design, video editing, IT support, and cybersecurity basics.</p></div></article>
+          <article><span class="opportunity-icon">↗</span><div><h3>Start with small projects</h3><p>Build a portfolio, offer a clear service, and grow trust with real clients.</p></div></article>
+          <article><span class="opportunity-icon">▣</span><div><h3>Find credible opportunities</h3><p>Verify employers and training providers independently. Never assume a job is legitimate because it appears online.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faqs">
+      <div class="container faq-layout">
+        <div class="faq-intro"><p class="eyebrow">Need clarity?</p><h2>Frequently asked<br><span class="text-green">questions.</span></h2><p>Quick answers about scams, privacy, community stories, and AI guidance.</p><a class="text-link" href="#questionnaire">Have a lesson to share? →</a></div>
+        <div class="faq-list">
+          <details><summary>How can I tell if something is a scam?<span>+</span></summary><p>Watch for pressure to act quickly, requests for upfront fees, guaranteed returns, suspicious links, secrecy, and requests for passwords or verification codes. Verify claims through official channels you find independently.</p></details>
+          <details><summary>Are questionnaire responses published immediately?<span>+</span></summary><p>No. Responses should remain pending until a moderator reviews them, removes identifying information, and approves a safe public version.</p></details>
+          <details><summary>Is the questionnaire completely anonymous?<span>+</span></summary><p>The form does not ask for your name or email. However, free-text details or infrastructure logs can potentially identify someone. Do not share private details, and read the site's privacy notice before submitting.</p></details>
+          <details><summary>Can the AI guarantee that a link or offer is safe?<span>+</span></summary><p>No. AI guidance can be incomplete or wrong. Treat it as educational support, verify independently, and use official reporting or support channels for high-risk situations.</p></details>
+          <details><summary>What if I have already sent money or shared a password?<span>+</span></summary><p>Contact your bank or payment provider promptly through an official channel, change compromised passwords from a trusted device, enable multifactor authentication, secure related accounts, and preserve evidence. Beware of people promising to recover money for an upfront fee.</p></details>
+          <details><summary>Why do some people continue scamming others?<span>+</span></summary><p>Reasons can include financial incentives, social pressure, rationalization, fear, or involvement in criminal networks. Understanding these factors does not excuse harm. Legitimate work and support are safer alternatives.</p></details>
+          <details><summary>How can I request removal of a published story?<span>+</span></summary><p>Contact the site administrator through the official contact channel listed by the site owner. Avoid sending passwords, bank details, or unnecessary identity documents in a removal request.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta"><div class="container closing-inner"><div><p class="eyebrow eyebrow-light">Pause. Check. Protect.</p><h2>A little awareness can prevent a lot of harm.</h2><p>Learn the signs, share lessons safely, and help build a more informed community.</p></div><a class="button button-white" href="#learn">Start learning <span>→</span></a></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark">✓</span><span>clear<span>shield</span></span></a><p>Helping people recognize deception, protect their information, and choose safer next steps.</p></div>
+      <div><strong>Explore</strong><a href="#learn">Scam guides</a><a href="#stories">Community stories</a><a href="#live-discussion">Live discussion</a><a href="#questionnaire">Share experience</a></div>
+      <div><strong>Support</strong><a href="#ai-guide">AI guidance</a><a href="#faqs">FAQs</a><a href="#opportunities">Legitimate opportunities</a></div>
+      <div><strong>Privacy first</strong><p class="footer-small">Never share passwords, verification codes, bank details, or identifying information in stories or chat.</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> ClearShield. Built for awareness and prevention.</span><span>Education only · Not legal, financial, or emergency advice</span></div>
+  </footer>
+</body>
+</html>

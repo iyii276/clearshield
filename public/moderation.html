@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176b45">
+  <title>ClearShield — Story moderation</title>
+  <link rel="stylesheet" href="/styles.css?v=4">
+  <style>
+    body { background:#f7faf7; }
+    .moderation-wrap { max-width:980px; margin:0 auto; padding:40px 20px 70px; }
+    .moderation-top { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:26px; }
+    .moderation-card { background:white; border:1px solid var(--line); border-radius:16px; padding:22px; margin:18px 0; box-shadow:var(--shadow); }
+    .moderation-card h2 { font-size:1.1rem; margin-bottom:12px; }
+    .moderation-card label { display:block; font-size:.82rem; font-weight:700; margin:14px 0 7px; }
+    .moderation-card input,.moderation-card textarea { display:block; width:100%; border:1px solid #d5e2d8; border-radius:9px; padding:11px 12px; font:inherit; }
+    .moderation-card textarea { resize:vertical; min-height:90px; }
+    .moderation-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:15px; }
+    .button-danger { border:1px solid #e8c9c7; color:#9f2d29; background:#fff6f5; border-radius:99px; padding:10px 17px; font-weight:700; cursor:pointer; }
+    .moderation-message { margin:14px 0; font-weight:600; font-size:.86rem; }
+    .moderation-message.error { color:#b3312d; }
+    .moderation-message.success { color:#176b45; }
+    .private-draft { background:#fff8ed; border-left:3px solid #d9a04b; padding:12px; border-radius:6px; white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
+    .discussion-admin-message { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; border-top:1px solid var(--line); padding:14px 0; }
+    .discussion-admin-message p { white-space:pre-wrap; overflow-wrap:anywhere; margin:5px 0; }
+    .discussion-admin-message .button-danger { flex:0 0 auto; }
+    .small-muted { color:var(--muted); font-size:.8rem; }
+    @media(max-width:600px){ .moderation-top{display:block;} }
+  </style>
+  <script defer src="/moderation.js?v=3"></script>
+</head>
+<body>
+  <main class="moderation-wrap">
+    <div class="moderation-top">
+      <div><p class="eyebrow">ClearShield administration</p><h1>Community story moderation</h1><p class="small-muted">Review anonymous submissions. Only the edited text you approve will be published.</p></div>
+      <a class="button button-outline" href="/">← View website</a>
+    </div>
+    <section id="loginCard" class="moderation-card" aria-labelledby="authTitle">
+      <h2 id="authTitle">Administrator sign in</h2>
+      <p class="small-muted">Sign in with the administrator username and password configured by the site owner. Your password is checked by the server and is never stored in this page.</p>
+      <form id="adminLoginForm">
+        <label for="adminUsername">Username</label>
+        <input id="adminUsername" name="username" type="text" autocomplete="username" maxlength="100" required>
+        <label for="adminPassword">Password</label>
+        <input id="adminPassword" name="password" type="password" autocomplete="current-password" maxlength="200" required>
+        <div class="moderation-actions"><button class="button button-green" id="loginButton" type="submit">Sign in</button></div>
+      </form>
+      <p id="moderationMessage" class="moderation-message" role="status" aria-live="polite"></p>
+    </section>
+    <div id="adminDashboard" hidden>
+      <section class="moderation-card">
+        <div class="moderation-top"><div><h2>Administrator dashboard</h2><p id="signedInAs" class="small-muted"></p></div><button class="button button-outline" id="logoutButton" type="button">Sign out</button></div>
+        <div class="moderation-actions"><button class="button button-green" id="loadPending" type="button">Refresh pending submissions</button></div>
+      </section>
+      <section id="pendingList" aria-label="Pending submissions"></section>
+      <section class="moderation-card" aria-labelledby="discussionModerationTitle">
+        <h2 id="discussionModerationTitle">Live discussion moderation</h2>
+        <p class="small-muted">Load recent public messages and remove spam, personal information, or abusive content. Removal is broadcast to connected visitors.</p>
+        <div class="moderation-actions"><button class="button button-green" id="loadDiscussion" type="button">Load recent messages</button></div>
+        <div id="discussionModerationList"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

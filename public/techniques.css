@@ -1,0 +1,36 @@
+/* Scam Techniques Library — extends ClearShield's existing green-and-white system. */
+.techniques-main{min-height:70vh;background:#f7faf8;color:#18352a}
+.techniques-hero{padding:64px 0 38px;background:linear-gradient(135deg,#eff9f2,#fff)}
+.techniques-hero h1{font-size:clamp(2.25rem,5vw,4rem);line-height:1.08;letter-spacing:-.04em;max-width:850px;margin:12px 0 18px}
+.techniques-hero p{max-width:760px;color:#52665c;font-size:1.08rem;line-height:1.75}
+.techniques-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,280px);gap:12px;margin:28px 0 18px}
+.techniques-controls input,.techniques-controls select{width:100%;min-height:48px;padding:12px 14px;border:1px solid #cbd9d0;border-radius:12px;background:#fff;color:#18352a;font:inherit}
+.techniques-controls input:focus,.techniques-controls select:focus{outline:3px solid #a7e2bf;outline-offset:2px}
+.techniques-count{color:#617269;font-size:.94rem;margin:12px 0 22px}
+.techniques-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-bottom:70px}
+.technique-card{display:flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid #e0e9e3;border-radius:18px;padding:22px;box-shadow:0 6px 20px #18352a08;min-height:250px;transition:transform .18s ease,border-color .18s ease}
+.technique-card:hover{transform:translateY(-3px);border-color:#8cc9a4}
+.technique-category{display:inline-flex;background:#e9f6ed;color:#176b45;font-size:.76rem;font-weight:700;border-radius:999px;padding:6px 10px;margin-bottom:14px}
+.technique-card h2{font-size:1.18rem;line-height:1.35;margin:0 0 10px}
+.technique-card p{color:#5a6b62;line-height:1.65;margin:0 0 18px}
+.technique-card a,.technique-link{margin-top:auto;color:#176b45;font-weight:700;text-decoration:none}
+.technique-card a:hover,.technique-link:hover{text-decoration:underline}
+.technique-empty{grid-column:1/-1;padding:34px;text-align:center;border:1px dashed #b8c9bd;border-radius:16px;color:#52665c}
+.breadcrumbs{padding:22px 0 0;color:#5e7166;font-size:.92rem}
+.breadcrumbs a{color:#176b45;text-decoration:none;font-weight:600}
+.technique-detail-wrap{padding:16px 0 76px}
+.technique-detail{max-width:900px;margin:0 auto;background:#fff;border:1px solid #e0e9e3;border-radius:22px;padding:clamp(22px,5vw,52px);box-shadow:0 8px 30px #18352a08}
+.technique-detail h1{font-size:clamp(2rem,4.5vw,3.35rem);line-height:1.12;letter-spacing:-.035em;margin:14px 0}
+.technique-detail .lead{font-size:1.12rem;line-height:1.8;color:#52665c;margin-bottom:32px}
+.technique-detail section{padding:22px 0;border-top:1px solid #e8eee9}
+.technique-detail section h2{font-size:1.3rem;margin:0 0 12px}
+.technique-detail section p,.technique-detail li{line-height:1.8;color:#45594e}
+.technique-detail ul{padding-left:22px}
+.example-panel{padding:18px 20px;border-left:4px solid #268452;background:#eff8f1;border-radius:0 12px 12px 0;color:#284b38;line-height:1.75}
+.related-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.related-links a{border:1px solid #cfe0d4;border-radius:999px;padding:8px 12px;color:#176b45;text-decoration:none;font-size:.9rem}
+.technique-nav{display:flex;justify-content:space-between;gap:14px;margin-top:28px}
+.technique-nav a{color:#176b45;font-weight:700;text-decoration:none}
+.technique-footer-note{color:#6b7a72;font-size:.88rem;margin-top:26px}
+@media(max-width:900px){.techniques-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.techniques-controls{grid-template-columns:1fr}.techniques-grid{grid-template-columns:1fr}.technique-card{min-height:0}.technique-nav{flex-direction:column}}
