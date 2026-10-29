@@ -14,10 +14,31 @@ const path = require("path");
 
 const app = express();
 const server = http.createServer(app);
+
 const io = new Server(server, {
   maxHttpBufferSize: 16 * 1024,
   cors: { origin: false }
 });
+
+// ---- Keep-alive self ping (paste at the bottom) ----
+const PING_URL = process.env.PING_URL || 'https://clearshieldawareness.onrender.com/ping';
+const PING_EVERY_MS = 14 * 60 * 1000;
+
+async function keepAlivePing() {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 30_000);
+  try {
+    const r = await fetch(PING_URL, { signal: ctrl.signal });
+    console.log(new Date().toISOString(), 'ping', r.status);
+  } catch (e) {
+    console.log(new Date().toISOString(), 'ping FAILED', e.message);
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+setTimeout(keepAlivePing, 60_000);               // first ping after 1 min
+setInterval(keepAlivePing, PING_EVERY_MS).unref(); // then every 14 min
 app.disable("x-powered-by");
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "same-origin" }
@@ -119,6 +140,10 @@ function isPlainText(value, maxLength) {
   return typeof value === "string" && value.length <= maxLength;
 }
 
+app.get("/ping", (req,res) => {
+  res.send("ok")
+  console.log("ok")
+})
 // Serve the primary stylesheet explicitly with cache revalidation to make LAN debugging predictable.
 app.get("/styles.css", (req, res, next) => {
   res.set("Cache-Control", "no-store");
